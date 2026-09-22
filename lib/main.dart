@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -66,8 +67,9 @@ class WelcomePage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 14),
                   ),
                   onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Login page coming soon')),
+                    Navigator .push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
                   child: const Text(
