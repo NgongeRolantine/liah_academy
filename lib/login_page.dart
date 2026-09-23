@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'register_page.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -31,12 +32,12 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
-    // Placeholder — this is where you'll later call your Yii2 login API
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Logging in as $email...')),
+    // Placeholder — later this will verify credentials against your Yii2 API
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HomePage()),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
